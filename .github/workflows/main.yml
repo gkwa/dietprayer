@@ -11,4 +11,4 @@ jobs:
         script: |
           docker pull mcr.microsoft.com/windows/servercore:ltsc2022
           docker images
-    - run: echo "${{ steps.my-script.outputs.result }}"
+    - run: echo "${{ steps.get-size-of-windows-image.outputs.result }}"
