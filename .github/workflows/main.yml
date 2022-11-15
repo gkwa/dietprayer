@@ -1,0 +1,14 @@
+"on":
+- push
+jobs:
+  test:
+    runs-on: windows-2022
+    steps:
+    - name: Check docker host release id
+      uses: Amadevus/pwsh-script@v2
+      id: get-windows-host-version-number
+      with:
+        script: |
+          docker pull mcr.microsoft.com/windows/servercore:ltsc2022
+          docker images
+    - run: echo "${{ steps.my-script.outputs.result }}"
