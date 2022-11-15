@@ -4,7 +4,7 @@ jobs:
   test:
     runs-on: windows-2022
     steps:
-    - name: Check docker host release id
+    - name: Get size of windows image
       uses: Amadevus/pwsh-script@v2
       id: get-windows-host-version-number
       with:
