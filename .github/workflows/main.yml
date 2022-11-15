@@ -9,6 +9,5 @@ jobs:
       id: get-size-of-windows-image
       with:
         script: |
-          docker pull mcr.microsoft.com/windows/servercore:ltsc2022
           docker images
     - run: echo "${{ steps.get-size-of-windows-image.outputs.result }}"
