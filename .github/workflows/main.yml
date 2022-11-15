@@ -6,7 +6,7 @@ jobs:
     steps:
     - name: Get size of windows image
       uses: Amadevus/pwsh-script@v2
-      id: get-windows-host-version-number
+      id: get-size-of-windows-image
       with:
         script: |
           docker pull mcr.microsoft.com/windows/servercore:ltsc2022
